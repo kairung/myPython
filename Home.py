@@ -15,10 +15,16 @@ html_8 = """
 """
 st.markdown(html_8, unsafe_allow_html=True)
 st.markdown("")
+
 dx = pd.read_excel('./data/gen.xlsx')
 st.dataframe(dx)
 
 dt=pd.read_csv('./data/iris.csv')
 st.dataframe(dt)
+
+dt1=dt.head(10)
+st.barchart(dt1)
+st.balloons()
+
 
 st.sidebar.markdown("# วิเคราะห์รายบุคคล ")
