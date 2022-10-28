@@ -21,10 +21,18 @@ dt3 = dt['sepal.length'].sum()
 dt4 = dt['sepal.width'].sum()
 dx = [dt1, dt2, dt3, dt4]
 dx2 = pd.DataFrame(dx, index=["d1", "d2", "d3", "d4"])
-if st.button("แสดงการจินตทัศน์ข้อมูล"):
-   st.plot_pie_chart(dx2)   
-   st.button("ไม่แสดงข้อมูล")
-else:
-    st.write("ไม่แสดงข้อมูล")
 
+fig.update_xaxes(
+    rangeslider_visible=True,
+    rangeselector=dict(
+        buttons=list([
+            dict(count=7, label="1w", step="day", stepmode="backward"),
+            dict(count=1, label="1m", step="month", stepmode="backward"),
+            dict(count=2, label="2m", step="month", stepmode="backward"),
+            dict(step="all")
+        ]),
+        font=dict(color='#008000', size=11),
+    )
+)
+st.plotly_chart(fig, use_container_width=True)
 
