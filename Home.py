@@ -23,7 +23,7 @@ dt=pd.read_csv('./data/iris.csv')
 st.dataframe(dt)
 
 dt1=dt.head(10)
-st.barchart(dt1)
+st.bar_chart(dt1)
 st.balloons()
 
 
