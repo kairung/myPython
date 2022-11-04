@@ -55,7 +55,7 @@ if st.button("ทำนายผล"):
     input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction)
-   st.button("ไม่แสดงข้อมูล")
+    st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงข้อมูล")
 
